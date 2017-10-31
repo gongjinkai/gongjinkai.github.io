@@ -176,7 +176,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/My-New-Post/">我的第一篇博客</a>
+      <a class="article-title" href="/2017/10/31/My-New-Post/">JAVAscript简单的封装</a>
     </h1>
   
 
@@ -189,29 +189,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>function Mathmethods () {
-       //加
-       this.add = function (a,b) {
-           var num = a + b;
-           console.log(num);
-       }
-       //减
-       this.reduce = function (a,b) {
-           var num = a - b;
-           console.log(num);
-       }
-       //乘
-       this.ride = function (a,b) {
-           var num = a * b;
-       }
-       //除
-       this.except = function (a,b) {
-           var num = a / b;
-       }
-   }
-
-   var a = new Mathmethods(); //实例化对象
-   a.reduce(9,7)              //调用方法
+        <p><code>javascript</code><br>     function Mathmethods () {<br>            //加<br>            this.add = function (a,b) {<br>                var num = a + b;<br>                console.log(num);<br>            }<br>            //减<br>            this.reduce = function (a,b) {<br>                var num = a - b;<br>                console.log(num);<br>            }<br>            //乘<br>            this.ride = function (a,b) {<br>                var num = a * b;<br>            }<br>            //除<br>            this.except = function (a,b) {<br>                var num = a / b;<br>            }<br>        }</p>
+<pre><code>var a = new Mathmethods(); //实例化对象
+a.reduce(9,7)              //调用方法
 </code></pre>
       
 
