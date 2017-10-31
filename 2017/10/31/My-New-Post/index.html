@@ -8,16 +8,40 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>我的第一篇博客 | gjk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2017">
+  <meta name="description" content="function Mathmethods () {
+       //加
+       this.add = function (a,b) {
+           var num = a + b;
+           console.log(num);
+       }
+       //减
+       this.reduce = function (a,b) {
+           va">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博客">
 <meta property="og:url" content="http://yoursite.com/2017/10/31/My-New-Post/index.html">
 <meta property="og:site_name" content="gjk的博客">
-<meta property="og:description" content="2017">
-<meta property="og:updated_time" content="2017-10-31T07:48:22.899Z">
+<meta property="og:description" content="function Mathmethods () {
+       //加
+       this.add = function (a,b) {
+           var num = a + b;
+           console.log(num);
+       }
+       //减
+       this.reduce = function (a,b) {
+           va">
+<meta property="og:updated_time" content="2017-10-31T07:52:49.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="2017">
+<meta name="twitter:description" content="function Mathmethods () {
+       //加
+       this.add = function (a,b) {
+           var num = a + b;
+           console.log(num);
+       }
+       //减
+       this.reduce = function (a,b) {
+           va">
   
     <link rel="alternative" href="/atom.xml" title="gjk的博客" type="application/atom+xml">
   
@@ -191,8 +215,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2017</p>
+        <pre><code>function Mathmethods () {
+       //加
+       this.add = function (a,b) {
+           var num = a + b;
+           console.log(num);
+       }
+       //减
+       this.reduce = function (a,b) {
+           var num = a - b;
+           console.log(num);
+       }
+       //乘
+       this.ride = function (a,b) {
+           var num = a * b;
+       }
+       //除
+       this.except = function (a,b) {
+           var num = a / b;
+       }
+   }
 
+   var a = new Mathmethods(); //实例化对象
+   a.reduce(9,7)              //调用方法
+</code></pre>
       
 
       
@@ -231,6 +277,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTML5</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -411,6 +472,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
