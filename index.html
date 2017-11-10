@@ -169,6 +169,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于this的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/10/关于this的问题/">关于this的问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/10/关于this的问题/" class="archive-article-date">
+  	<time datetime="2017-11-10T08:11:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题<br>   function People(){<br>        this.y=0;<br>        alert(this.y);<br>   }<br>   People();         //this指向global</p>
+<p>   function Person(name){<br>       this.name=”xiaoming”<br>       this.showName=function(){<br>       console.log(this.name)    //谁调用了就指向谁<br>      }<br>   }</p>
+<p>   var name=”window”;<br>       var testObj={<br>           name:”testObj”,<br>           getName:function(){<br>               var This = this;  //存储this的指向<br>               var handle=function(){<br>                   console.log(this);<br>                   console.log(this.name);<br>                   console.log(This);<br>               };<br>               handle();<br>           }<br>       };<br>       testObj.getName();   //this指向全局。testObj是全局变量存在于window中</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTML5</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/10/关于this的问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js封装Tab切换" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
