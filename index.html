@@ -189,8 +189,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题<br>    function People(){<br>        this.y=0;<br>        alert(this.y);<br>    }<br>    People();         //this指向global</p>
-<pre><code>function Person(name){
+        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题</p>
+<pre><code>function People(){
+    this.y=0;
+    alert(this.y);
+}
+People();         //this指向global
+
+function Person(name){
    this.name=&quot;xiaoming&quot;
    this.showName=function(){
    console.log(this.name)    //谁调用了就指向谁

@@ -8,22 +8,40 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于this的问题 | gjk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题    function People(){        this.y=0;        alert(this.y);    }    People();         //this指向global
+  <meta name="description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题
+function People(){
+    this.y=0;
+    alert(this.y);
+}
+People();         //this指向global
+
 function Person(name){
-   this.name=">
+   this.name=&amp;quot;xiaoming">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于this的问题">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/关于this的问题/index.html">
 <meta property="og:site_name" content="gjk的博客">
-<meta property="og:description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题    function People(){        this.y=0;        alert(this.y);    }    People();         //this指向global
+<meta property="og:description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题
+function People(){
+    this.y=0;
+    alert(this.y);
+}
+People();         //this指向global
+
 function Person(name){
-   this.name=">
-<meta property="og:updated_time" content="2017-11-10T08:29:08.085Z">
+   this.name=&amp;quot;xiaoming">
+<meta property="og:updated_time" content="2017-11-10T08:32:28.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于this的问题">
-<meta name="twitter:description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题    function People(){        this.y=0;        alert(this.y);    }    People();         //this指向global
+<meta name="twitter:description" content="之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题
+function People(){
+    this.y=0;
+    alert(this.y);
+}
+People();         //this指向global
+
 function Person(name){
-   this.name=">
+   this.name=&amp;quot;xiaoming">
   
     <link rel="alternative" href="/atom.xml" title="gjk的博客" type="application/atom+xml">
   
@@ -197,8 +215,14 @@ function Person(name){
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题<br>    function People(){<br>        this.y=0;<br>        alert(this.y);<br>    }<br>    People();         //this指向global</p>
-<pre><code>function Person(name){
+        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题</p>
+<pre><code>function People(){
+    this.y=0;
+    alert(this.y);
+}
+People();         //this指向global
+
+function Person(name){
    this.name=&quot;xiaoming&quot;
    this.showName=function(){
    console.log(this.name)    //谁调用了就指向谁
