@@ -189,10 +189,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题<br>   function People(){<br>        this.y=0;<br>        alert(this.y);<br>   }<br>   People();         //this指向global</p>
-<p>   function Person(name){<br>       this.name=”xiaoming”<br>       this.showName=function(){<br>       console.log(this.name)    //谁调用了就指向谁<br>      }<br>   }</p>
-<p>   var name=”window”;<br>       var testObj={<br>           name:”testObj”,<br>           getName:function(){<br>               var This = this;  //存储this的指向<br>               var handle=function(){<br>                   console.log(this);<br>                   console.log(this.name);<br>                   console.log(This);<br>               };<br>               handle();<br>           }<br>       };<br>       testObj.getName();   //this指向全局。testObj是全局变量存在于window中</p>
+        <p>之前对于this关键字有一些误解。一直以为this指向的是上面的哪个function对象,在这里写了几段片段来思考这个问题<br>    function People(){<br>        this.y=0;<br>        alert(this.y);<br>    }<br>    People();         //this指向global</p>
+<pre><code>function Person(name){
+   this.name=&quot;xiaoming&quot;
+   this.showName=function(){
+   console.log(this.name)    //谁调用了就指向谁
+  }
+}
 
+var name=&quot;window&quot;;
+   var testObj={
+       name:&quot;testObj&quot;,
+       getName:function(){
+           var This = this;  //存储this的指向
+           var handle=function(){
+               console.log(this);
+               console.log(this.name);
+               console.log(This);
+           };
+           handle();
+       }
+   };
+   testObj.getName();   //this指向全局。testObj是全局变量存在于window中
+</code></pre>
       
 
       
