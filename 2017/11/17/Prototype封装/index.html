@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Javascript | gjk的博客</title>
+  <title>Prototype封装 | gjk的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="gjk的博客">
-<meta property="og:url" content="http://yoursite.com/tags/Javascript/index.html">
+  <meta name="description" content="##使用Prototype进行封装1234567891011121314151617181920212223242526272829303132333435363738394041(function()&amp;#123;        function Dialog(container,wrapper,content)&amp;#123;                        //创建构造函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Prototype封装">
+<meta property="og:url" content="http://yoursite.com/2017/11/17/Prototype封装/index.html">
 <meta property="og:site_name" content="gjk的博客">
+<meta property="og:description" content="##使用Prototype进行封装1234567891011121314151617181920212223242526272829303132333435363738394041(function()&amp;#123;        function Dialog(container,wrapper,content)&amp;#123;                        //创建构造函数">
+<meta property="og:updated_time" content="2017-11-17T01:00:53.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gjk的博客">
+<meta name="twitter:title" content="Prototype封装">
+<meta name="twitter:description" content="##使用Prototype进行封装1234567891011121314151617181920212223242526272829303132333435363738394041(function()&amp;#123;        function Dialog(container,wrapper,content)&amp;#123;                        //创建构造函数">
   
     <link rel="alternative" href="/atom.xml" title="gjk的博客" type="application/atom+xml">
   
@@ -167,36 +171,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Prototype封装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Prototype封装
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/17/Prototype封装/" class="archive-article-date">
+
+        
+        <a href="/2017/11/17/Prototype封装/" class="archive-article-date">
   	<time datetime="2017-11-17T00:50:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/17/Prototype封装/">Prototype封装</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##使用Prototype进行封装<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">Dialog</span>(<span class="params">container,wrapper,content</span>)</span>&#123;                        <span class="comment">//创建构造函数</span></div><div class="line">            <span class="keyword">var</span> This=<span class="keyword">this</span>;</div><div class="line">            Dialog.constructor = Dialog;</div><div class="line">            <span class="keyword">this</span>.container = <span class="built_in">document</span>.getElementById(container);</div><div class="line">            <span class="keyword">this</span>.wrapper=<span class="built_in">document</span>.getElementById(wrapper);</div><div class="line">            <span class="keyword">this</span>.content = content || <span class="string">"示例文本"</span>;</div><div class="line">            <span class="comment">//绑定事件</span></div><div class="line">            <span class="keyword">this</span>.container.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                This.addElement();</div><div class="line">            &#125;);</div><div class="line">            <span class="comment">//绑定事件</span></div><div class="line">            <span class="keyword">this</span>.wrapper.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                This.open();</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">        Dialog.prototype.addElement=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                     <span class="comment">//原型链挂载addElement()</span></div><div class="line">            <span class="keyword">var</span> box = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">            box.className=<span class="string">"box1"</span>;</div><div class="line">            <span class="built_in">document</span>.body.appendChild(box);</div><div class="line">            box.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                alert(<span class="number">4</span>);</div><div class="line">            &#125;)</div><div class="line">        &#125;;</div><div class="line">        Dialog.prototype.open=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="keyword">var</span> This=<span class="keyword">this</span>;</div><div class="line">           <span class="keyword">var</span> zhezhao=<span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</div><div class="line">           zhezhao.className=<span class="string">"zhezhao"</span>;</div><div class="line">           zhezhao.innerHTML=<span class="string">`&lt;div&gt;&lt;span class="close"&gt;x&lt;/span&gt;&lt;/div&gt;`</span>;</div><div class="line">           <span class="built_in">document</span>.body.appendChild(zhezhao);</div><div class="line">           <span class="keyword">var</span> closeBtn = zhezhao.querySelector(<span class="string">".close"</span>);</div><div class="line">           closeBtn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">               This.close()</div><div class="line">           &#125;</div><div class="line">        &#125;;</div><div class="line">        Dialog.prototype.close=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> closeBox=<span class="built_in">document</span>.querySelector(<span class="string">'.zhezhao'</span>);</div><div class="line">            <span class="built_in">document</span>.body.removeChild(closeBox);</div><div class="line">        &#125;;</div><div class="line">        <span class="built_in">window</span>.Dialog = Dialog</div><div class="line">    &#125;)(<span class="built_in">window</span>)</div></pre></td></tr></table></figure></p>
+<p>##使用方法<br>    var dialog =new Dialog(“dialog”,”wrapper”);</p>
+<p>##练习过程中用的Prototype、this关键字等相关知识</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/pay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/pay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -212,145 +248,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/17/Prototype封装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/关于this的问题/" class="archive-article-date">
-  	<time datetime="2017-11-10T08:11:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/10/关于this的问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于this的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/关于this的问题/">关于this的问题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTML5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/js封装Tab切换/" class="archive-article-date">
-  	<time datetime="2017-10-31T09:41:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/js封装Tab切换/">js封装Tab切换</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTML5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/My-New-Post/" class="archive-article-date">
-  	<time datetime="2017-10-31T03:39:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/My-New-Post/">Javascript简单的封装</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">HTML5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -373,9 +370,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
